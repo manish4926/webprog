@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+.tools-container {
+    height: 100px;
+    /* background: aqua; */
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+.tools-content {
+    height: 70%;
+    width: 70%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: aliceblue;
+    border-radius: 10px;
+}
+
+.tools {
+    height: 55%;
+    width: 10%;
+}
+
+.tools img {
+    height: 100%;
+    width: 100%;
+}
+
+.drawings-container {
+    height: calc(100vh - 100px);
+    background: red;
+}
+
+#canvas {
+    background: violet;
+}

@@ -8,6 +8,8 @@ window.addEventListener("resize", function() {
 })
 
 let ctx = canvas.getContext("2d");
+let linesDb = [];
+let line = [];
 
 // console.log(ctx);
 
@@ -16,23 +18,43 @@ let ctx = canvas.getContext("2d");
 // ctx.fillRect(10, 10, 150, 100);
 let isPenDown = false;
 canvas.addEventListener("mousedown", function(e) {
-    let {clientX, clientY} = e;
-    console.log(clientX, clientY);
+    let x = e.clientX;
+    let y = e.clientY;
+    console.log(x, y);
     ctx.beginPath();
-    ctx.moveTo(clientX, clientY-100);
+    ctx.moveTo(x, y-100);
     isPenDown = true;
+
+    let pointObject = {
+        x:x,
+        y:y,
+        type:"md"
+    }
+    line.push(pointObject);
 })
 
 canvas.addEventListener("mousemove", function(e) {
     if(isPenDown) {
-        let {clientX, clientY} = e;
-        ctx.lineTo(clientX, clientY-100);
-        console.log(clientX, clientY);
+        let x = e.clientX;
+        let y = e.clientY;
+        ctx.lineTo(x, y-100);
+        console.log(x, y);
+
+        let pointObject = {
+            x:x,
+            y:y,
+            type:"mm"
+        }
+        line.push(pointObject);
     }
 })
 
 canvas.addEventListener("mouseup", function(e) {
     ctx.stroke();
     isPenDown = false;
+    linesDb.push(line);
+    line = [];
+    console.log(linesDb);
+    redoDb = [];
 })
 

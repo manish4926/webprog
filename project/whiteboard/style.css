@@ -6,9 +6,9 @@
 
 .tools-container {
     height: 100px;
-    /* background: aqua; */
+    background: antiquewhite;
     display: flex;
-    justify-items: center;
+    justify-content: center;
     align-items: center;
 }
 
@@ -18,13 +18,14 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background: aliceblue;
+    background: lightcyan;
     border-radius: 10px;
 }
 
 .tools {
     height: 55%;
     width: 10%;
+    position: relative;
 }
 
 .tools img {
@@ -34,9 +35,9 @@
 
 .drawings-container {
     height: calc(100vh - 100px);
-    background: red;
+    /* background: red; */
 }
 
 #canvas {
-    background: violet;
+    /* background: violet; */
 }

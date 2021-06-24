@@ -38,6 +38,7 @@ canvas.addEventListener("mousemove", function(e) {
         let x = e.clientX;
         let y = e.clientY;
         ctx.lineTo(x, y-100);
+        ctx.stroke();
         console.log(x, y);
 
         let pointObject = {
@@ -50,7 +51,7 @@ canvas.addEventListener("mousemove", function(e) {
 })
 
 canvas.addEventListener("mouseup", function(e) {
-    ctx.stroke();
+    
     isPenDown = false;
     linesDb.push(line);
     line = [];

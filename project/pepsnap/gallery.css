@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.gallery {
+    display: flex;
+    gap:20px;
+    padding: 20px;
+
+}
+
+.media-div {
+    height: 300px;
+    width: 200px;
+    border: solid 1px lightgrey;
+    padding: 5px;
+}
+
+.media-img {
+    width: 100%;
+    height: 80%;
+}
+
+.media-button {
+    display: flex;
+    width: 100%;
+    height: 20%;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+.media-button div {
+    padding: 10px;
+}
+
+.download-media {
+    background-color: lightblue;
+    color: #fff;
+}
+
+.delete-media {
+    background-color: red;
+    color: #fff;
+}

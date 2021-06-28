@@ -1,10 +1,12 @@
 let sticky = document.querySelector("#sticky");
-sticky.addEventListener("click", addSticky);
+sticky.addEventListener("click", function() {
+    addSticky();
+});
 
-function addSticky() {
+function addSticky(imageElement) {
     let stickyDiv = document.createElement("div");
     stickyDiv.classList.add("sticky");
-    stickyDiv.contentEditable = true;
+    //stickyDiv.contentEditable = true;
     stickyDiv.innerHTML = `
     <div class="sticky-header">
         <div class="minimize"></div>
@@ -16,6 +18,13 @@ function addSticky() {
     let stickyContent = stickyDiv.querySelector(".sticky-content");
     let minimize = stickyDiv.querySelector(".minimize");
     let close = stickyDiv.querySelector(".close");
+    
+
+    if(imageElement) {
+        stickyContent.append(imageElement);
+    } else {
+        stickyContent.contentEditable = true;
+    }
 
     stickyContent.addEventListener("dblclick", function() {
         stickyDiv.contentEditable = true;
@@ -53,10 +62,12 @@ function addSticky() {
             stickyDiv.style.top = top + dy + "px";
             stickyDiv.style.left = left + dx + "px";
         }
+        
     })
 
     stickyHeader.addEventListener("mouseup", function(e) {
         isStickyHold = false;
+        console.log('disa');
     })
 
     document.body.append(stickyDiv);

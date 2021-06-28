@@ -38,9 +38,9 @@
   /* background: red; */
 }
 
-#canvas {
-  /* background: violet; */
-}
+/* #canvas {
+  background: violet;
+} */
 
 /* Sticky Notes */
 .sticky {
@@ -68,6 +68,7 @@
     width: 8%;
     margin-right: 10px;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .sticky-header .minimize {
@@ -87,3 +88,15 @@
     word-break: break-word;
 }
 
+/* Photo Upload */
+#photo-upload {
+  display: none;
+}
+
+.sticky-image {
+  object-fit: cover;
+  /* max-width: -webkit-fill-available; */
+  max-height: -webkit-fill-available;
+  display: flex;
+  width: 100%;
+}

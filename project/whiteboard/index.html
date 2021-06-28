@@ -11,8 +11,24 @@
 <body>
     <div class="tools-container">
         <tools class="tools-content">
-            <div class="tools"><img src="./assets/icons/Black_Pencil.svg" alt=""></div>
-            <div class="tools"><img src="./assets/icons/Eraser.svg" alt=""></div>
+            <div class="tools active-tool" id="pen"><img src="./assets/icons/Black_Pencil.svg" alt="">
+                <div class="tool-options hide">
+                    <div id="pensize">
+                        <input type="range" id="pensize-input">
+                    </div>
+                    <div class="pen-colors">
+                        <div class="black"></div>
+                        <div class="yellow"></div>
+                        <div class="blue"></div>
+                        <div class="green"></div>
+                        <div class="red"></div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="tools disabled-tool" id="eraser"><img src="./assets/icons/Eraser.svg" alt="">
+                <div class="tool-options hide">Tools</div>
+            </div>
             <div class="tools" id="undo"><img src="./assets/icons/Undo.svg" alt=""></div>
             <div class="tools" id="redo"><img src="./assets/icons/Redo.svg" alt=""></div>
             <div class="tools" id="sticky"><img src="./assets/icons/StickyNote.svg" alt=""></div>
@@ -20,7 +36,7 @@
                 <img src="./assets/icons/Photo.svg" alt="" />
                 <input type="file" id="photo-upload">
             </div>
-            <div class="tools"><img src="./assets/icons/Download.svg" alt=""></div>
+            <div class="tools" id="download"><img src="./assets/icons/Download.svg" alt=""></div>
         </tools>
     </div>
     <div class="drawings-container">
@@ -30,5 +46,6 @@
 <script src="tools.js"></script>
 <script src="sticky.js"></script>
 <script src="img.js"></script>
+<script src="drawingtools.js"></script>
 </body>
 </html>

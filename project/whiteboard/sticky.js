@@ -61,6 +61,10 @@ function addSticky(imageElement) {
             let {top, left} = stickyDiv.getBoundingClientRect();
             stickyDiv.style.top = top + dy + "px";
             stickyDiv.style.left = left + dx + "px";
+            let fdx = top + dy;
+            let fdy = left + dx;
+            console.log("Final: "+finalX+"-"+finalY);
+            console.log("DxDy: "+fdx+"-"+fdy + dx);
         }
         
     })

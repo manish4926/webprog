@@ -100,3 +100,65 @@
   display: flex;
   width: 100%;
 }
+
+/* Pen Tools */
+.active-tool {
+  transform: scale(1.2);
+}
+.disabled-tool {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: scale(1);
+}
+
+.hide {
+  display: none !important;
+}
+
+.tool-options {
+  height: 100px;
+    background-color: aqua;
+    width: 100px;
+    position: absolute;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.pensize {
+
+}
+
+.pensize input {
+
+}
+
+.pen-colors {
+  display: flex;
+}
+
+.pen-colors div{
+  height: 20px;
+  width: 20px;
+}
+
+.black {
+  background: black;
+}
+
+.yellow {
+  background: yellow;
+}
+
+.blue {
+  background: blue;
+}
+
+.green {
+  background: green;
+}
+
+.red {
+  background: red;
+}

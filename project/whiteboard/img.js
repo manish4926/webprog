@@ -1,5 +1,6 @@
 let photoDiv = document.querySelector('#photo');
 let photoUploadInput = photoDiv.querySelector('#photo-upload');
+let download = document.querySelector("#download");
 
 photoDiv.addEventListener('click', function() {
     photoUploadInput.click();
@@ -15,4 +16,13 @@ photoUploadInput.addEventListener('change', function(e) {
     img.classList.add("sticky-image");
     //document.querySelector("body").append(img);
     addSticky(img);
+})
+
+download.addEventListener("click", function() {
+    let imagePath = canvas.toDataURL("image/png");
+    let downlaodLink = document.createElement("a");
+    downlaodLink.download = "canvas.jpg";
+    downlaodLink.href = imagePath;
+    downlaodLink.click();
+    
 })

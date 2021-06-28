@@ -3,6 +3,7 @@ let redo = document.querySelector("#redo");
 
 let redoDb = [];
 
+
 undo.addEventListener("click", undoLine);
 redo.addEventListener("click", redoLine);
 
@@ -14,6 +15,7 @@ function undoLine() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         drawLinesFromDB();
     }
+    
 }
 
 
@@ -31,6 +33,7 @@ let drawLinesFromDB = () => {   //Sugar Syntax Function
         ctx.stroke();
 
     }
+    checkDisabledTools();
 }
 
 function redoLine() {
@@ -42,3 +45,19 @@ function redoLine() {
         drawLinesFromDB();
     }
 }
+
+let checkDisabledTools = () => {
+    if(linesDb.length == 0) {
+        undo.classList.add('disabled-tool');
+    } else {
+        undo.classList.remove('disabled-tool');
+    }
+    if(redoDb.length == 0) {
+        redo.classList.add('disabled-tool');
+    } else {
+        redo.classList.remove('disabled-tool');
+    }
+    
+}
+
+checkDisabledTools();
